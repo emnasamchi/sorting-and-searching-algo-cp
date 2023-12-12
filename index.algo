@@ -1,0 +1,23 @@
+function sort(arr) {
+//    number of  elements 
+  var len = arr.length;       
+  var sum, i, j;                  
+  
+  for(i = 1; i < len; i++) {
+    //stock the real value
+    sum = arr[i]
+    j = i - 1
+    while (j >= 0 & arr[j] > sum) {
+      // change the place of the number 
+      arr[j+1] = arr[j]
+      j--
+    }
+   
+    arr[j+1] = sum
+  }
+  return arr
+}
+
+var arr = [5, 8, 11, 6, 1, 9, 3];
+sort(arr);
+console.log(arr);
